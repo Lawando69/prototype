@@ -1,4 +1,4 @@
-import "./AuthForm.css";
+import "./AuthForms.css";
 import { useState } from "react";
 
 export default function LoginForm({toggle}){

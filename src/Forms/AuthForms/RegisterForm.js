@@ -1,4 +1,4 @@
-import "./AuthForm.css";
+import "./AuthForms.css";
 import { useState } from "react";
 import axios from "axios";
 
@@ -28,7 +28,7 @@ export default function RegisterForm({ toggle }){
 
         }
 
-        axios.post(ENDPOINT, FORM_DATA)
+        axios.post(ENDPOINT_URL, FORM_DATA)
             .then(response => {
                 console.log(response.data)
                 login(response.data)

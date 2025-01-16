@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { useState, createContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const MainContext = createContext();
@@ -23,7 +23,7 @@ export function MainProvider({children}){
     }
 
     return(
-        <UserContext.Provider value={{user, login, logout}}>{children}</UserContext.Provider>
+        <MainContext.Provider value={{user, login, logout}}>{children}</MainContext.Provider>
     )
 
 }
