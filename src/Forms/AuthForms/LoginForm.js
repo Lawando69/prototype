@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function LoginForm({toggle}){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    //NOTE: Add a reset password feature
 
     return(
         <form className="auth-form">
