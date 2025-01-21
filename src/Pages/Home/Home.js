@@ -1,8 +1,13 @@
 import "./Home.css"
-import react from "react";
+import react, {useState} from "react";
+import axios from 'axios';
+
 
 export default function Home(){
+
+    const url = ""; //NOTE: Add the api link here
+
     return(
-        <h1>This is the Home page.</h1>
+        <h1>This is the home page</h1>
     )
 }
