@@ -1,5 +1,6 @@
 import './App.css';
 import Pages from "./Pages"
+import DesktopNavbar from './Components/DesktopNavbar/DesktopNavbar';
 import Footer from "./Components/Footer/Footer";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+      <DesktopNavbar/>
       <Pages />
       <Footer />
     </div>

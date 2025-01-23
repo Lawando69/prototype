@@ -16,7 +16,6 @@ export default function DesktopNavbar(){
             <Link to="/healthadvice" className="nav-link">HEALTH ADVICE</Link>
             <Link to="/about" className="nav-link">ABOUT</Link>
             <Link to="/dashboard" className="nav-link">DASHBOARD</Link>
-
             {
                 user ?
                 <>
@@ -24,7 +23,7 @@ export default function DesktopNavbar(){
                     <Link to="/profile" className="action-button">My account</Link>
                 </>
                     :<a to="/join" className="action-button" />
-                    /*NOTE: Ask tutor if the anchor tag can be used in this way.*/
+                    /*NOTE: You can use the Link feature instead of the anchor tag which will still allow to save img in there for the icon.*/
             }
         </header>
     )
