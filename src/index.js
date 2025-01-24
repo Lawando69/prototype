@@ -13,6 +13,14 @@ root.render(
       <App />
     </BrowserRouter>
   </MainProvider>
+
+  /*Fixed Code to add later Delete the one above:
+  <BrowserRouter>
+    <MainProvider>
+      <App />
+    </MainProvider>
+  </BrowserRouter>
+  */
 );
 
 // If you want to start measuring performance in your app, pass a function
