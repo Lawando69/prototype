@@ -22,8 +22,12 @@ export default function DesktopNavbar(){
                     <a className="nav-link" onClick={logout}>Logout</a>
                     <Link to="/profile" className="action-button">My account</Link>
                 </>
-                    :<a to="/join" className="action-button" />
-                    /*NOTE: You can use the Link feature instead of the anchor tag which will still allow to save img in there for the icon.*/
+                    /*NOTE: The link bellow is uses an icon instead of text*/
+                    :<Link to="/join" className="action-button">
+                        <img
+                            src="../../Assets/Icons/profile-icon.svg"
+                        />
+                    </Link>
             }
         </header>
     )
