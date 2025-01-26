@@ -1,5 +1,6 @@
 import "./DesktopNavbar.css";
 import Logo from "../Logo/Logo";
+import ProfileIcon from "../../Assets/Icons/Profile-icon.svg"
 
 import { useContext } from "react";
 import { MainContext } from "../../Context/MainContext";
@@ -24,9 +25,7 @@ export default function DesktopNavbar(){
                 </>
                     /*NOTE: The link bellow is uses an icon instead of text*/
                     :<Link to="/join" className="action-button">
-                        <img
-                            src="../../Assets/Icons/profile-icon.svg"
-                        />
+                        <img src={ProfileIcon} alt="Profile icon" id="profile-icon"/>
                     </Link>
             }
         </header>
