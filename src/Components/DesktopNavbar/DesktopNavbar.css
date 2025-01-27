@@ -10,6 +10,7 @@
     top: 16px;
     right: 16px;
     left: 16px;
+    z-index: 1000;
 
     border-radius: 8px;
     padding: 8px;
@@ -30,9 +31,31 @@
         border-radius: 4px;
         padding: 4px 16px;
     }
+
+    > .nav-link:hover{
+        color: lightgray;
+        border-bottom: 2px solid white;
+    }
+
+    > .profile-icon-container{
+        margin-right: 10px;
+
+        > #profile-icon {
+            height: 48px;
+            width: 48px;
+            padding: none;
+        }
+    }
+
+    > .profile-icon-container:hover{
+        border-bottom: 2px solid #377ade;
+    }
 }
 
-#profile-icon {
-    height: 10px;
-    width: 20px;
+
+@media only screen and (max-width: 600px){
+    #desktop-header{
+        display: none;
+    }
 }
+

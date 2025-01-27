@@ -24,7 +24,7 @@ export default function DesktopNavbar(){
                     <Link to="/profile" className="action-button">My account</Link>
                 </>
                     /*NOTE: The link bellow is uses an icon instead of text*/
-                    :<Link to="/join" className="action-button">
+                    :<Link to="/join" className="profile-icon-container">
                         <img src={ProfileIcon} alt="Profile icon" id="profile-icon"/>
                     </Link>
             }
