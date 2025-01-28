@@ -1,0 +1,13 @@
+.weather-container{
+    margin-left: "33%";
+}
+
+.weather-component{
+    height: 150px;
+    width: 450px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
