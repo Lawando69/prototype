@@ -6,41 +6,42 @@ export default function WeatherData(){
     const [temperature, setTemperature] = useState("");
     const [precipition, setPrecipitation] = useState("");
     const [wind, setWind] = useState("");
-    const [city, setCity] = useState("London");
+    const [city, setCity] = useState("");
     const [error, setError] = useState();
     const [isLoading, setIsLoading] = useState(true);
+    const api_key = "8fad9c886225d5088e4dfea3a18893c0";
 
     const getWeatherData = (city) => {
         axios({
             method: "GET",
-            url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=8fad9c886225d5088e4dfea3a18893c0`
+            url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}`
         })
         .then((response) => {
-            console.log([ response.data.list ]);
+            console.log([ response.data.list ]); //NOTE: Temporary, can be deleted after use
 
             let weeks = []
             let current_week = []
 
             for (let i in response.data.list){
-
-                
-
                 if ( (i + 7) % 7 == 0 && i != 0 ){
-                    console.log("pushed on index: ", i)
-                    weeks.push(current_week)
+                    let counter = 0;
+                    console.log("pushed on index: ", i);
+                    weeks.push(current_week);
+                    //NOTE: The code bellow doesn't work properly. Trying to show the temperature of each day in a week
+                    // if (counter != 7){
+                    //     console.log(response.current_week[counter].main.temp);
+                    //     counter += 1;
+                    // }
                     current_week = []
                 }
-
                 current_week.push(response.data.list[i]);
-
             } 
-
             if(current_week.length > 0){
                 weeks.push(current_week)
             }
 
             // console.log("visible: ")
-            // console.log(weeks[0][0].visibility);
+            console.log(weeks[0][0].visibility);
             //NOTE: The code within the Brackets above allows us to access the [] the first list, [] then the second list
 
             setIsLoading(false);
@@ -58,11 +59,11 @@ export default function WeatherData(){
                     <br/>
                     {city} Weather
                     <br/>
-                    {temperature}  
+                    {/*temperature*/}  
                 </div>
                 <br/>
-                <input type="text" value={city} onChange={(ci => setCity(ci.target.value))} />
-                <button onClick={() => {getWeatherData(city);}}>GET</button>
+                <input type="text" placeholder="Address, City" value={city} onChange={(ci => setCity(ci.target.value))} />
+                <button onClick={() => {getWeatherData(city);}}>Search</button>
             </div>
         </>
     )
