@@ -1,6 +1,6 @@
 import "./DesktopNavbar.css";
 import Logo from "../Logo/Logo";
-import ProfileIcon from "../../Assets/Icons/Profile-icon.svg"
+import ProfileIcon from "../../Assets/Icons/profile-icon.svg"
 
 import { useContext } from "react";
 import { MainContext } from "../../Context/MainContext";
