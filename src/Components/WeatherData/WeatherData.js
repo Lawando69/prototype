@@ -23,15 +23,12 @@ export default function WeatherData(){
             let current_week = []
 
             for (let i in response.data.list){
-                if ( (i + 7) % 7 == 0 && i != 0 ){
-                    let counter = 0;
+                if ( (i + 7) % 7 === 0 && i != 0 ){
                     console.log("pushed on index: ", i);
                     weeks.push(current_week);
-                    //NOTE: The code bellow doesn't work properly. Trying to show the temperature of each day in a week
-                    // if (counter != 7){
-                    //     console.log(response.current_week[counter].main.temp);
-                    //     counter += 1;
-                    // }
+                    for(let i of current_week){
+                        console.log(i.main.temp);
+                    }
                     current_week = []
                 }
                 current_week.push(response.data.list[i]);
@@ -41,7 +38,7 @@ export default function WeatherData(){
             }
 
             // console.log("visible: ")
-            console.log(weeks[0][0].visibility);
+            //console.log(weeks[0][0].visibility);
             //NOTE: The code within the Brackets above allows us to access the [] the first list, [] then the second list
 
             setIsLoading(false);
