@@ -26,6 +26,7 @@ export default function WeatherData(){
                 if ( (i + 7) % 7 === 0 && i != 0 ){
                     console.log("pushed on index: ", i);
                     weeks.push(current_week);
+                    console.log(city)
                     for(let i of current_week){
                         console.log(i.main.temp);
                     }
