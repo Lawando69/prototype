@@ -14,7 +14,7 @@ export default function WeatherData(){
     const getWeatherData = (city) => {
         axios({
             method: "GET",
-            url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}`
+            url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}&units=metric`
         })
         .then((response) => {
             console.log([ response.data.list ]); //NOTE: Temporary, can be deleted after use
@@ -57,7 +57,7 @@ export default function WeatherData(){
                     <br/>
                     {city} Weather
                     <br/>
-                    {/*temperature*/}  
+                    {temperature}  
                 </div>
                 <br/>
                 <input type="text" placeholder="Address, City" value={city} onChange={(ci => setCity(ci.target.value))} />
