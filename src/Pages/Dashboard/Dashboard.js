@@ -1,7 +1,8 @@
 import "./Dashboard.css";
+import WeatherData from "../../Components/WeatherData/WeatherData";
 
 export default function Dashboard(){
     return(
-        <h1>This is the Dashboard page</h1>
+        <WeatherData />
     )
 }

@@ -2,7 +2,6 @@ import "./Home.css"
 import WeatherData from "../../Components/WeatherData/WeatherData";
 
 
-
 export default function Home(){
     //Add the catch feature
  // get weather data from context
@@ -18,6 +17,7 @@ export default function Home(){
 
 
     // }
+
 
 
     return(

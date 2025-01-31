@@ -1,11 +1,11 @@
-.weather-container{
+.weather-container-home{
     margin-left: "33%";
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.weather-component{
+.weather-component-home{
     height: 150px;
     width: 450px;
     background-color: lightblue;

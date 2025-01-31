@@ -14,7 +14,7 @@ export default function DesktopNavbar(){
         <header id="desktop-navbar">
             <Logo/>
             <Link to="/" className="nav-link">HOME</Link>
-            <Link to="/healthadvice" className="nav-link">HEALTH ADVICE</Link>
+            <Link to="/health-advice" className="nav-link">HEALTH ADVICE</Link>
             <Link to="/about" className="nav-link">ABOUT</Link>
             <Link to="/dashboard" className="nav-link">DASHBOARD</Link>
             {
