@@ -21,7 +21,8 @@ export default function Home(){
 
 
     return(
-        <div className="home-container" style={{backgroundImage: getBgImage()}}>
+        //NOTE:style={{backgroundImage: getBgImage()}}
+        <div className="home-container">
             <WeatherData />
         </div>
     )
