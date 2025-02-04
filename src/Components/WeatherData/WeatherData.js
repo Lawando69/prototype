@@ -25,7 +25,7 @@ export default function WeatherData(){
         }
         setError("");
 
-        const response = await axios({
+        await axios({
             method: "GET",
             url: `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}&units=metric`
         })
